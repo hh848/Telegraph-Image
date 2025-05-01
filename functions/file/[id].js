@@ -1,7 +1,7 @@
 export async function onRequest(context) {
     const { request, env, params } = context;
     const url = new URL(request.url);
-
+ 
     // 根据环境变量决定获取模式
     if (env.UPLOAD_MODE === 'R2') {
         // 直接从 R2 获取文件
